@@ -14,6 +14,9 @@ public class MoviesApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MoviesApplication.class, args);
+		Runtime.getRuntime().addShutdownHook(new Thread(() -> {
+			System.out.println("Shutdown hook");
+		}));
 	}
 
 }
