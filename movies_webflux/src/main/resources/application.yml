@@ -1,0 +1,17 @@
+vertx:
+  pg:
+    client:
+      port: 6543
+      host: localhost
+      database: ecodeals
+      user: ecodeals
+      password: ecodeals2023
+      maxSize: 5
+r2dbc:
+  datasources:
+    default:
+      schema-generate: never
+      dialect: POSTGRES
+      url: r2dbc:postgresql://localhost:6543/ecodeals
+      username: ecodeals
+      password: ecodeals2023
