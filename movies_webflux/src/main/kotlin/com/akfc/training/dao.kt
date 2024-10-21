@@ -1,4 +1,4 @@
-package fr.cenotelie.training.flux.movies
+package com.akfc.training
 
 import jakarta.transaction.Transactional
 import org.springframework.data.repository.reactive.ReactiveCrudRepository

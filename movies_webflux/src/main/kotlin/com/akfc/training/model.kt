@@ -1,4 +1,4 @@
-package fr.cenotelie.training.flux.movies
+package com.akfc.training
 
 import jakarta.persistence.*
 import java.time.LocalDate
@@ -10,7 +10,7 @@ enum class Genre {
 @Entity
 data class Actor (
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(jakarta.persistence.GeneratedValue.strategy = GenerationType.AUTO)
     val id: Long,
     val firstname: String,
     val email: String?,

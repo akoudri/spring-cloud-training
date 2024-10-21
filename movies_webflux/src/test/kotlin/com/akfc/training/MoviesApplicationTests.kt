@@ -1,4 +1,4 @@
-package fr.cenotelie.training.flux.movies
+package com.akfc.training
 
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest

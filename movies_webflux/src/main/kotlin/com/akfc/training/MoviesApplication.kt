@@ -1,4 +1,4 @@
-package fr.cenotelie.training.flux.movies
+package com.akfc.training
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
