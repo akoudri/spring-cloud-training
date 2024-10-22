@@ -1,0 +1,2 @@
+insert into book (id, description, isbn, price, rating, release_date, title)
+values (1, 'premier livre', 'xxxxxx', 20.0, 4.5, '2020-04-01', '20000 lieux de Paris')
