@@ -1,6 +1,6 @@
 package com.akfc.training.configuration;
 
-import org.jetbrains.annotations.NotNull;
+import jakarta.validation.constraints.NotNull;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 public class AppServletInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
