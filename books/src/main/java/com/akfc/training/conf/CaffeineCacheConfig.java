@@ -1,4 +1,4 @@
-package com.akfc.training.configuration;
+package com.akfc.training.conf;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
 import org.springframework.cache.CacheManager;
@@ -15,7 +15,7 @@ public class CaffeineCacheConfig {
 
     @Bean
     public CacheManager cacheManager() {
-        CaffeineCacheManager cacheManager = new CaffeineCacheManager("movies");
+        CaffeineCacheManager cacheManager = new CaffeineCacheManager("books");
         cacheManager.setCaffeine(caffeineCacheBuilder());
         return cacheManager;
     }

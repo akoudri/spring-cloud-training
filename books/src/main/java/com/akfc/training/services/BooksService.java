@@ -2,6 +2,9 @@ package com.akfc.training.services;
 
 import com.akfc.training.dao.BooksDAO;
 import com.akfc.training.model.Book;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -15,32 +18,32 @@ public class BooksService {
         this.booksDAO = booksDAO;
     }
 
-    //@Cacheable(value = "books", key = "#result.id")
+    @Cacheable(value = "books", key = "#result.id")
     public List<Book> getAllBooks() {
         return booksDAO.findAll();
     }
 
-    //@CachePut(value = "books", key = "#result.title")
+    @CachePut(value = "books", key = "#result.title")
     public Book addBook(Book book) {
         return booksDAO.save(book);
     }
 
-    //@Cacheable(value = "books", key = "#title")
+    @Cacheable(value = "books", key = "#title")
     public Book getBookByTitle(String title) {
         return booksDAO.findByTitle(title).orElse(null);
     }
 
-    //@Cacheable(value = "books", key = "#id")
+    @Cacheable(value = "books", key = "#id")
     public Book getBookById(long id) {
         return booksDAO.findById(id).orElse(null);
     }
 
-    //@CachePut(value = "books", key = "#title")
+    @CachePut(value = "books", key = "#title")
     public Book updateBook(Book book) {
         return booksDAO.save(book);
     }
 
-    //@CacheEvict(value = "books", key = "#id")
+    @CacheEvict(value = "books", key = "#id")
     public void deleteBookById(long id) {
         booksDAO.deleteById(id);
     }
