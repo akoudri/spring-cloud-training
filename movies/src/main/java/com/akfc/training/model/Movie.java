@@ -39,7 +39,7 @@ public class Movie {
     @Column(nullable = false)
     @Past
     private LocalDate releaseDate;
-    //@Column(columnDefinition = "TEXT") //Specific to postgresql
+    @Column(columnDefinition = "TEXT") //Specific to postgresql
     private String description;
     @Min(0)
     @Max(5)
