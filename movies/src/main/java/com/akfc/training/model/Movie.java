@@ -12,14 +12,14 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 @Entity
 @Table(uniqueConstraints = {
         @UniqueConstraint(columnNames = {"title", "director"})
 })
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
