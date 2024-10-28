@@ -6,6 +6,9 @@ import com.akfc.training.dto.Book;
 import com.akfc.training.exceptions.MovieNotFoundException;
 import com.akfc.training.model.Movie;
 import com.akfc.training.proxies.BookProxy;
+import io.github.resilience4j.bulkhead.annotation.Bulkhead;
+import io.github.resilience4j.ratelimiter.annotation.RateLimiter;
+import io.github.resilience4j.retry.annotation.Retry;
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,8 +41,17 @@ public class MoviesController {
     }
 
     @GetMapping("/books/{id}")
+    @Retry(name = "wait3times2s", fallbackMethod = "getBookFallback")
+    @RateLimiter(name = "limit2s")
+    @Bulkhead(name = "limit10cc")
     public Book getBook(@PathVariable Long id) {
+        log.info("Getting book with id: {}", id);
         return bookProxy.getBook(id);
+    }
+
+    public Book getBookFallback(Long id, Throwable t) {
+        log.error("Error getting book with id: {}", id, t);
+        return null;
     }
 
     @GetMapping
