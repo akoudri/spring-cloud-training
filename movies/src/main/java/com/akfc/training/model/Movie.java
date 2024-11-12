@@ -11,16 +11,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
-import java.util.List;
 
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
-@Builder
 @Entity
 @Table(uniqueConstraints = {
         @UniqueConstraint(columnNames = {"title", "director"})
 })
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 public class Movie {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -40,17 +39,10 @@ public class Movie {
     @Column(nullable = false)
     @Past
     private LocalDate releaseDate;
-    //@Column(columnDefinition = "TEXT") //Specific to postgresql
+    @Column(columnDefinition = "TEXT") //Specific to postgresql
     private String description;
     @Min(0)
     @Max(5)
     private Double rating;
     private String fromBook;
-    @ManyToMany
-    @JoinTable(
-            name = "Acting",
-            joinColumns = @JoinColumn(name = "actor_id"),
-            inverseJoinColumns = @JoinColumn(name = "movie_id")
-    )
-    private List<Actor> actors;
 }

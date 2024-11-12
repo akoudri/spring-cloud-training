@@ -13,8 +13,8 @@ public class Book {
     private Long id;
     private String title;
     private String description;
-    private String author;
     private String isbn;
     private LocalDate releaseDate;
     private Double price;
+    private Double rating;
 }

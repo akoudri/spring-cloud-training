@@ -54,7 +54,7 @@ public class MoviesCtrl {
 
     @GetMapping("/message")
     public String getMessage() {
-        return config.getMessage();
+        return config.getGreetings();
     }
 
     @GetMapping("/{id}/book")

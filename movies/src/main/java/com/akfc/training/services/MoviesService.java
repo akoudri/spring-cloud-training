@@ -7,6 +7,8 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class MoviesService {
 
@@ -14,6 +16,11 @@ public class MoviesService {
 
     public MoviesService(MoviesDAO moviesDAO) {
         this.moviesDAO = moviesDAO;
+    }
+
+    @Cacheable(value = "movies", key = "#result.id")
+    public List<Movie> getAllMovies() {
+        return moviesDAO.findAll();
     }
 
     @Cacheable(value = "movies", key = "#id")

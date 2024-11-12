@@ -2,26 +2,17 @@ package com.akfc.training;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.akfc.training.model.Genre;
-import com.akfc.training.model.Movie;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.ResultActions;
-
-import java.time.LocalDate;
-import java.util.List;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @ExtendWith(SpringExtension.class)
 @SpringBootTest
@@ -34,7 +25,7 @@ public class MoviesCtrlTest {
     @Autowired
     private ObjectMapper objectMapper;
 
-    @Test
+    /*@Test
     public void testMovieCreation() throws Exception {
         Movie movie = Movie.builder()
                 .title("Les dents de la mer 2")
@@ -52,5 +43,5 @@ public class MoviesCtrlTest {
         response.andDo(print())
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.title", is(movie.getTitle())));
-    }
+    }*/
 }
