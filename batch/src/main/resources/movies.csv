@@ -1,11 +1,11 @@
 id,title,director,genre,productionDate,releaseDate,description,rating,fromBook
 1,"The Shawshank Redemption","Frank Darabont",1,1993-06-15,1994-09-23,"Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",4.9,"Rita Hayworth and Shawshank Redemption"
-2,"Inception","Christopher Nolan",2,2009-07-10,2010-07-16,"A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",4.8,null
+2,"Inception","Christopher Nolan",2,2009-07-10,2010-07-16,"A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O.",4.8,"No book"
 3,"The Dark Knight","Christopher Nolan",3,2007-04-15,2008-07-18,"When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",4.9,"Batman: The Long Halloween"
 4,"Forrest Gump","Robert Zemeckis",1,1993-08-10,1994-07-06,"The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75.",4.8,"Forrest Gump"
-5,"Interstellar","Christopher Nolan",2,2013-08-20,2014-11-07,"A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",4.7,null
+5,"Interstellar","Christopher Nolan",2,2013-08-20,2014-11-07,"A team of explorers travel through a wormhole in space in an attempt to ensure humanity's survival.",4.7,"No book"
 6,"The Lord of the Rings: The Fellowship of the Ring","Peter Jackson",4,2000-10-11,2001-12-19,"A meek Hobbit from the Shire and eight companions set out on a journey to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.",4.9,"The Lord of the Rings"
-7,"Gladiator","Ridley Scott",3,1999-01-15,2000-05-05,"A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",4.8,null
-8,"Avatar","James Cameron",2,2008-08-01,2009-12-18,"A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",4.7,null
-9,"The Matrix","The Wachowskis",2,1998-03-31,1999-03-31,"A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to break free.",4.8,null
-10,"Titanic","James Cameron",1,1996-07-15,1997-12-19,"A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",4.7,null
+7,"Gladiator","Ridley Scott",3,1999-01-15,2000-05-05,"A former Roman General sets out to exact vengeance against the corrupt emperor who murdered his family and sent him into slavery.",4.8,"No book"
+8,"Avatar","James Cameron",2,2008-08-01,2009-12-18,"A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",4.7,"No book"
+9,"The Matrix","The Wachowskis",2,1998-03-31,1999-03-31,"A computer programmer discovers that reality as he knows it is a simulation created by machines, and joins a rebellion to break free.",4.8,"No book"
+10,"Titanic","James Cameron",1,1996-07-15,1997-12-19,"A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",4.7,"No book"
