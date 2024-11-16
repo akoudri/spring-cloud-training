@@ -1,25 +1,20 @@
 package com.akfc.training.controllers;
 
-import com.akfc.training.dao.MessagesDAO;
-import com.akfc.training.streams.MessageProducer;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import com.akfc.training.services.MessageService;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/messages")
 public class MessageCtrl {
 
-    @Autowired
-    private MessagesDAO messagesDAO;
+    private final MessageService messageService;
 
-    @Autowired
-    private MessageProducer producer;
+    public MessageCtrl(MessageService messageService) {
+        this.messageService = messageService;
+    }
 
-    @PostMapping
-    public void postMessage(@RequestParam String content) {
-        producer.sendMessage(content);
+    @GetMapping
+    public String getMessage() {
+        return messageService.getMessage();
     }
 }
