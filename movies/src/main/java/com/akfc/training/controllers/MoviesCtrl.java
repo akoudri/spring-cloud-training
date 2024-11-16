@@ -27,9 +27,6 @@ import java.util.List;
 public class MoviesCtrl {
 
     @Autowired
-    private MessagesConfig config;
-
-    @Autowired
     private MoviesDAO dao;
 
     @Autowired
@@ -50,11 +47,6 @@ public class MoviesCtrl {
         EntityModel<Movie> movieModel = EntityModel.of(movie);
         movieModel.add(linkTo.withRel("movies"));
         return movieModel;
-    }
-
-    @GetMapping("/message")
-    public String getMessage() {
-        return config.getGreetings();
     }
 
     @GetMapping("/{id}/book")
