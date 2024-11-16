@@ -47,8 +47,14 @@ services:
     environment:
       - RABBITMQ_USERNAME=training
       - RABBITMQ_PASSWORD=training
+      # - RABBITMQ_DEFAULT_USER=training
+      # - RABBITMQ_DEFAULT_PASS=training
+      # - RABBITMQ_DEFAULT_VHOST=/
+      # - RABBITMQ_LOOPBACK_USERS=
     ports:
       - "5672:5672"
       - "15672:15672"
+    volumes:
+      - ./rabbitmq.conf:/opt/bitnami/rabbitmq/etc/rabbitmq/rabbitmq.conf
 
 
