@@ -10,7 +10,7 @@ enum class Genre {
 @Entity
 data class Actor (
     @Id
-    @GeneratedValue(jakarta.persistence.GeneratedValue.strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     val id: Long,
     val firstname: String,
     val email: String?,
