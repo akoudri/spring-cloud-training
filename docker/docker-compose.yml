@@ -53,15 +53,15 @@ services:
     volumes:
       - ./rabbitmq.conf:/opt/bitnami/rabbitmq/etc/rabbitmq/rabbitmq.conf
 
-  # prometheus:
-  #   image: bitnami/prometheus
-  #   container_name: prometheus
-  #   ports:
-  #     - 9090:9090
+  prometheus:
+    image: bitnami/prometheus
+    container_name: prometheus
+    ports:
+      - 9090:9090
 
-  # grafana:
-  #   image: bitnami/grafana
-  #   container_name: grafana
-  #   ports:
-  #     - 3000:3000
+  grafana:
+    image: bitnami/grafana
+    container_name: grafana
+    ports:
+      - 3000:3000
 
