@@ -11,7 +11,7 @@ public class AppConfig {
     @Bean
     public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
-                .route("joke-roue", r -> r.path("/api/jokes/random")
+                .route("jokes", r -> r.path("/api/jokes/random")
                         .filters(f -> f.rewritePath("/api/jokes/random", "/jokes/random"))
                         .uri("https://api.chucknorris.io"))
                 .route("movies", r -> r.path("/movies/**")
