@@ -1,8 +1,0 @@
-r2dbc:
-  datasources:
-    default:
-      schema-generate: never
-      dialect: POSTGRES
-      url: r2dbc:postgresql://localhost:6543/training
-      username: training
-      password: training
