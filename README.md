@@ -15,3 +15,6 @@ http://localhost:8080/actuator
 
 http://localhost:8080/explorer
 
+# Config Server url
+
+http://localhost:8888/shared/default
