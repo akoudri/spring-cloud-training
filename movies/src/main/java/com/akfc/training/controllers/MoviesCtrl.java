@@ -40,11 +40,6 @@ public class MoviesCtrl {
         return movieModel;
     }
 
-    @GetMapping("/title/{title}")
-    public Movie getMovieByTitle(@PathVariable("title") String title) {
-        return movies.getMovieByTitle(title).orElseThrow(() -> new MovieNotFoundException("Movie with title " + title + " not found"));
-    }
-
     @PostMapping
     public ResponseEntity<Movie> addMovie(@Valid @RequestBody Movie movie) {
         log.info("saving movie with title {}", movie.getTitle());
