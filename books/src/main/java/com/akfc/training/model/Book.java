@@ -19,6 +19,7 @@ public class Book {
     private Long id;
     @Column(unique = true, nullable = false)
     private String title;
+    private String author;
     @Column(columnDefinition = "TEXT") //Specific to postgresql
     private String description;
     @Column(nullable = false)

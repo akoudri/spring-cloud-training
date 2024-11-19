@@ -54,7 +54,7 @@ public class MoviesCtrl {
     @RateLimiter(name = "wait3times2s")
     @Bulkhead(name = "wait3times2s")
     //@Retry(name = "wait3times2s", fallbackMethod = "fallbackGetBook")
-    public Book getMoviesByBook(@PathVariable("id") Long id) {
+    public Book getBook(@PathVariable("id") Long id) throws InterruptedException {
         Movie movie = dao.findById(id).orElse(null);
         if (movie == null) {
             throw new MovieNotFoundException("Movie with id " + id + " not found");
@@ -62,10 +62,10 @@ public class MoviesCtrl {
         if (movie.getFromBook() == null) return null;
         //RestTemplate restTemplate = new RestTemplate();
         //return restTemplate.getForObject(movie.getFromBook(), Book.class);
-        return proxy.getBookByTitle(movie.getFromBook());
+        return proxy.getBook(movie.getFromBook());
     }
 
-    public Book fallbackGetBook(Long id) {
+    public Book fallbackGetBook(Long id, Throwable throwable) {
         return null;
     }
 

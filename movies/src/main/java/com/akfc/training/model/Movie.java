@@ -44,5 +44,5 @@ public class Movie {
     @Min(0)
     @Max(5)
     private Double rating;
-    private String fromBook;
+    private Long fromBook;
 }

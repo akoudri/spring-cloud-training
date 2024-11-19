@@ -20,13 +20,8 @@ public class BooksController {
 
     @GetMapping("/{id}")
     public Book getBook(@PathVariable Long id) throws InterruptedException {
-        Thread.sleep(4000);
+        //Thread.sleep(4000);
         return booksService.getBookById(id);
-    }
-
-    @GetMapping("/title")
-    public Book getBookByTitle(@RequestParam("title") String title) {
-        return booksService.getBookByTitle(title);
     }
 
     @PostMapping
